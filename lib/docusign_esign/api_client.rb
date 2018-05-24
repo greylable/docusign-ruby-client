@@ -16,6 +16,7 @@ require 'tempfile'
 require 'typhoeus'
 require 'uri'
 require 'jwt'
+require 'time'
 
 
 module DocuSign_eSign
