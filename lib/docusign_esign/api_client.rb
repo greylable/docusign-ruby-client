@@ -17,7 +17,6 @@ require 'typhoeus'
 require 'uri'
 require 'jwt'
 require 'time'
-require 'date'
 
 module DocuSign_eSign
   class ApiClient
@@ -190,12 +189,12 @@ module DocuSign_eSign
         data.to_f
       when 'BOOLEAN'
         data == true
-      when 'DateTime'
-        # parse date time (expecting ISO 8601 format)
-        DateTime.parse data
-      when 'Date'
-        # parse date time (expecting ISO 8601 format)
-        Date.parse data
+      # when 'DateTime'
+      #   # parse date time (expecting ISO 8601 format)
+      #   DateTime.parse data
+      # when 'Date'
+      #   # parse date time (expecting ISO 8601 format)
+      #   Date.parse data
       when 'Object'
         # generic object (usually a Hash), return directly
         data
