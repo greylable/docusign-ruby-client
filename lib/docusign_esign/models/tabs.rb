@@ -397,8 +397,8 @@ module DocuSign_eSign
       case type.to_sym
       when :DateTime
         DateTime.parse(value)
-      when :Date
-        Date.parse(value)
+      # when :Date
+      #   Date.parse(value)
       when :String
         value.to_s
       when :Integer
