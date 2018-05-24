@@ -17,7 +17,6 @@ require 'typhoeus'
 require 'uri'
 require 'jwt'
 require 'time'
-require 'date_time'
 
 module DocuSign_eSign
   class ApiClient
