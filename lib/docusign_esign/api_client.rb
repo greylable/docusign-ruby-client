@@ -189,12 +189,12 @@ module DocuSign_eSign
         data.to_f
       when 'BOOLEAN'
         data == true
-      # when 'DateTime'
-      #   # parse date time (expecting ISO 8601 format)
-      #   DateTime.parse data
-      # when 'Date'
-      #   # parse date time (expecting ISO 8601 format)
-      #   Date.parse data
+      when 'DateTime'
+        # parse date time (expecting ISO 8601 format)
+        DateTime.parse data
+      when 'Date'
+        # parse date time (expecting ISO 8601 format)
+        data
       when 'Object'
         # generic object (usually a Hash), return directly
         data
