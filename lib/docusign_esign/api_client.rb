@@ -387,6 +387,7 @@ module DocuSign_eSign
       now = Time.now.to_i
       later = now + expires_in
       private_key = OpenSSL::PKey::RSA.new(File.read(private_key_filename));
+      print(private_key)
       # private_key = OpenSSL::PKey::RSA.new(private_key_filename);
 
       payload = {
