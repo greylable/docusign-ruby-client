@@ -389,6 +389,7 @@ module DocuSign_eSign
       private_key = OpenSSL::PKey::RSA.new(File.read(private_key_filename));
       # private_key = ;
       print(File.read(private_key_filename));
+      print(File.read(private_key_filename).class);
       # private_key = OpenSSL::PKey::RSA.new(private_key_filename);
 
       payload = {
