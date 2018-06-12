@@ -312,7 +312,7 @@ module DocuSign_eSign
     # @param recipient_id The ID of the recipient being accessed.
     # @param bulk_recipients_request  (optional parameter)
     # @return [Array<(BulkRecipientsSummaryResponse, Fixnum, Hash)>] BulkRecipientsSummaryResponse data, response status code and response headers
-    def update_recipients_with_http_info(account_id, envelope_id, recipient_id, bulk_recipients_request)
+    def update_recipients_with_http_info(account_id, envelope_id, recipient_id, bulk_recipients_request, body_params)
       if @api_client.config.debugging
         @api_client.config.logger.debug "Calling API: BulkEnvelopesApi.update_recipients ..."
       end
@@ -332,12 +332,13 @@ module DocuSign_eSign
       header_params = {}
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-
+      header_params['Content-Type'] = 'text/csv'
       # form parameters
       form_params = {}
 
       # http body (model)
-      post_body = @api_client.object_to_http_body(bulk_recipients_request)
+      # post_body = @api_client.object_to_http_body(bulk_recipients_request)
+      post_body = body_params
       auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
