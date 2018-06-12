@@ -338,6 +338,7 @@ module DocuSign_eSign
 
       # http body (model)
       post_body = @api_client.object_to_http_body(bulk_recipients_request)
+      puts post_body
       # post_body = body_params
       auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
