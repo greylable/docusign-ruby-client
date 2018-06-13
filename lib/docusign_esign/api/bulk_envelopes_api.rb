@@ -332,7 +332,7 @@ module DocuSign_eSign
       header_params = {}
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      header_params['Content-Type'] = @api_client.select_header_content_type(['text/csv'])
+      header_params['Content-Type'] = 'text/csv'
       # form parameters
       form_params = {}
 
