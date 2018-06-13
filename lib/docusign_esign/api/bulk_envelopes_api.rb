@@ -330,15 +330,14 @@ module DocuSign_eSign
 
       # header parameters
       header_params = {}
-
       # HTTP header 'Accept' (if needed)
       header_params['Accept'] = @api_client.select_header_accept(['application/json'])
-      header_params['Content-Type'] = 'text/csv'
+      # header_params['Content-Type'] = 'text/csv'
       # form parameters
       form_params = {}
 
       # http body (model)
-      # post_body = @api_client.object_to_http_body(bulk_recipients_request)
+      post_body = @api_client.object_to_http_body(bulk_recipients_request)
       # puts post_body
       # post_body = body_params
       auth_names = []
@@ -346,7 +345,7 @@ module DocuSign_eSign
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
-        :body => bulk_recipients_request,
+        :body => post_body,
         :auth_names => auth_names,
         :return_type => 'BulkRecipientsSummaryResponse')
       if @api_client.config.debugging
