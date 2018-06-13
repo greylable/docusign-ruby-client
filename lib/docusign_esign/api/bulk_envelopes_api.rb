@@ -338,14 +338,14 @@ module DocuSign_eSign
 
       # http body (model)
       post_body = @api_client.object_to_http_body(bulk_recipients_request)
-      puts post_body
+      puts bulk_recipients_request
       # post_body = body_params
       auth_names = []
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path,
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
-        :body => post_body,
+        :body => bulk_recipients_request,
         :auth_names => auth_names,
         :return_type => 'BulkRecipientsSummaryResponse')
       if @api_client.config.debugging
